@@ -32,8 +32,14 @@ export const processFileUpload = async (
             body: formData,
         });
 
+        if (response.status === 400) {
+            throw new Error('Некорректный запрос');
+        }
+        if (response.status === 500) {
+            throw new Error('Ошибка сервера');
+        }
         if (!response.ok) {
-            throw new Error('Ошибка отправки файла');
+            throw new Error(`Ошибка отправки файла: ${response.status}`);
         }
 
         const reader = response.body?.getReader();

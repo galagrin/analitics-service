@@ -13,8 +13,14 @@ export const fetchReport = async (): Promise<ReportResult> => {
             },
         });
 
+        if (result.status === 400) {
+            throw new Error('Некорректный запрос');
+        }
+        if (result.status === 500) {
+            throw new Error('Ошибка сервера');
+        }
         if (!result.ok) {
-            throw new Error('Ошибка при получении данных');
+            throw new Error(`Ошибка: ${result.status}`);
         }
 
         const blob = await result.blob();
