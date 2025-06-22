@@ -1,4 +1,4 @@
-import type { AggregateResponse } from "./fileApi";
+import type { AggregateResponse } from './fileApi';
 
 export const fieldValidation = (data: AggregateResponse) => {
     const requiredFields = [
