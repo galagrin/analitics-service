@@ -21,8 +21,8 @@ npm run dev
 ## Структура проекта:
 
 ```
-├───assets
-├───components
+├───assets                    # картинки и иконки
+├───components                # переиспользуемые и непереиспользуемые компоненты
 │ ├───Button
 │ ├───FileInfo
 │ ├───Header
@@ -36,26 +36,26 @@ npm run dev
 │ ├───ReportGenarationField
 │ ├───UploadAndSend
 │ └───UploadField
-├───constants
-├───pages
+├───constants                 # константы для api
+├───pages                     # страницы приложения
 │ ├───GeneratorPage
 │ ├───HistoryPage
 │ └───HomePage
 ├───services
-│ ├───api
-│ └───storage
-├───store
-└───utils
+│ ├───api                     # логика запросов к api и валидации ошибак
+│ └───storage                 # логика работы с local storage
+├───store                     # стор zustand
+└───utils                     # обработка дат
 ```
 
 ## Технологический стек:
 
--   Язык: TypeScript
+- Язык: TypeScript
 
--   Стили: CSS Modules
--   State-менеджер: Zustand
--   Роутинг: react-router-dom
--   API: Fetch
--   Модальные окна: React Portals
--   Хранение данных для истории: LocalStorage
--   Линтинг: ESLint + Prettier
+- Стили: CSS Modules
+- State-менеджер: Zustand
+- Роутинг: react-router-dom
+- API: Fetch
+- Модальные окна: React Portals
+- Хранение данных для истории: LocalStorage
+- Линтинг: ESLint + Prettier
