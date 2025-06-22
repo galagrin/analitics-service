@@ -1,0 +1,22 @@
+.generateMoreBtn {
+    border-radius: 25px;
+    padding: 15px 27px;
+    width: 438px;
+    height: 80px;
+    background-color: var(--active-btn-color);
+}
+.deleteAllBtn {
+    border-radius: 25px;
+    padding: 15px 27px;
+    width: 276px;
+    height: 80px;
+    background-color: var(--main-text-color);
+    color: var(--white-color);
+}
+.btnWrap {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

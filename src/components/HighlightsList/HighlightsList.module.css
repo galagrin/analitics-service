@@ -1,0 +1,21 @@
+.hightlightsWrap {
+    min-height: 407px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.highlightHeading {
+    color: var(--second-text-color);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    text-align: center;
+}
+.highlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 39px;
+    row-gap: 10px;
+}

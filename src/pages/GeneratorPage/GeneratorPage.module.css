@@ -1,0 +1,10 @@
+.generatorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 110%;
+}

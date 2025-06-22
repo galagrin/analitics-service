@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=YS+Geo&display=swap');
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: #201b10;
+    background-color: #fce2ff;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --second-bg-color: #cb81ff;
+    --third-bg-color: #eacdff;
+    --sent-btn-color: #c0c0c0;
+    --active-btn-color: #2ae881;
+    --upload-btn-color: #d4fae6;
+    --main-text-color: #201b10;
+    --second-text-color: #cb81ff;
+
+    --white-color: #fff;
+    --hover-color: #d4fae6;
+    --error-color: #ff5f00;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    padding: 40px;
+    max-width: 1920px;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    border-radius: 10px;
+    padding: 15px 27px;
+    width: 361px;
+    height: 70px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 110%;
+    text-align: center;
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.5s all;
+}
+button:hover {
+    transform: scale(1.02);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #201b10;
+        background-color: #fce2ff;
+    }
+
+    button {
+        background-color: #f9f9f9;
+    }
+}

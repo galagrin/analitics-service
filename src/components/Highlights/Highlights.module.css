@@ -1,0 +1,24 @@
+.highlightItem {
+    border-radius: 24px;
+    padding: 10px;
+    width: 900px;
+    height: 117px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.highlightsBg {
+    background: var(--white-color);
+}
+.isModal {
+    background-color: var(--third-bg-color);
+}
+.itemValue {
+    font-weight: 500;
+    font-size: 40px;
+}
+.itemDescription {
+    font-weight: 400;
+    font-size: 20px;
+}

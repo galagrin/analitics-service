@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 80px;
+}
+.logowrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 46px;
+}
+.logo {
+    max-width: 268px;
+    cursor: pointer;
+}
+.title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 90%;
+    text-transform: uppercase;
+    background-color: var(--second-bg-color);
+    padding: 4px 6px 6px 6px;
+}
+ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px;
+}
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 110%;
+    cursor: pointer;
+    padding-bottom: 4px;
+}
+.active {
+    border-bottom: 2px solid var(--main-text-color);
+}

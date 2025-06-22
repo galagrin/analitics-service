@@ -1,0 +1,44 @@
+.fileInfoWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+    padding: 16px 20px;
+    max-width: 1713px;
+    max-height: 92px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--second-bg-color);
+    cursor: pointer;
+}
+.fileName,
+.fileStatus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+.fileName img,
+.fileStatus img {
+    width: 40px;
+    height: 40px;
+}
+.trashIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 16px 20px;
+    width: 77px;
+    height: 77px;
+    background-color: var(--white-color);
+    cursor: pointer;
+}
+.active {
+    opacity: 1;
+}
+.inactive {
+    opacity: 0.5;
+}
