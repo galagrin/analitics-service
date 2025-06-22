@@ -18,24 +18,33 @@ npm install
 npm run dev
 ```
 
+> Для корректной работы необходим запущенный backend на `http://localhost:3000`
+
 ## Структура проекта:
+
+- входная точка - main.tsx
+- настройка роутинка App.tsx
+- настройка основных стилей приложения - index.css
+- настройка форматирования - prettier.prettier.json
+- каждый компонент содержит index.ts, который экспортирует наружу необходимое
+- типы вынесены в отдельные файлы types.ts
 
 ```
 ├───assets                    # картинки и иконки
 ├───components                # переиспользуемые и непереиспользуемые компоненты
-│ ├───Button
+│ ├───Button                  # переиспользуемая кнопка
 │ ├───FileInfo
-│ ├───Header
-│ ├───Highlights
+│ ├───Header                  # шапка страниц
+│ ├───Highlights              # хайлайты на главной странице
 │ ├───HighlightsList
-│ ├───HistoryItem
-│ ├───HistoryItemsList
-│ ├───InfoDisplay
-│ ├───MainLayout
-│ ├───Modal
-│ ├───ReportGenarationField
-│ ├───UploadAndSend
-│ └───UploadField
+│ ├───HistoryItem             # компонент одной записи в истории
+│ ├───HistoryItemsList        № компонент со списком HistoryItem и модальным окном
+│ ├───InfoDisplay             # переиспользуемый компонент с кнопкой, лоадером и текстом
+│ ├───MainLayout              # каркас отображения элементов на странице
+│ ├───Modal                   # модельное окно
+│ ├───ReportGenarationField   # поле генерации отчета
+│ ├───UploadAndSend           #drag&drop + кнопка отправки и UploadField
+│ └───UploadField             # загрузка файла по кнопке
 ├───constants                 # константы для api
 ├───pages                     # страницы приложения
 │ ├───GeneratorPage
