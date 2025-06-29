@@ -14,7 +14,7 @@
     background: var(--white-color);
     border-radius: 45px;
     position: relative;
-    max-width: 1000px;
+    max-width: 1200px;
     border-radius: 45px;
     padding: 40px;
     box-shadow: -6px 21px 100px 0 rgba(0, 0, 0, 0.35);
@@ -23,4 +23,5 @@
     flex-direction: column;
     gap: 13px;
     overflow-y: auto;
+    overflow-x: hidden;
 }

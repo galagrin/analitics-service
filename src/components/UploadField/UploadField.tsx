@@ -11,6 +11,7 @@ export const UploadField = ({ loading, handleFileChange }: UploadFieldProps) => 
                 onChange={handleFileChange}
                 disabled={loading}
                 accept=".csv"
+                data-testid="file-input"
             />
 
             <label htmlFor="file-upload" className={styles.uploadBtn}>

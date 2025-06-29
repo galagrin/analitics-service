@@ -25,6 +25,7 @@ export const HistoryItemsList = ({ historyItems, handleDeleteHistoryItem }: Hist
                             handleDeleteHistoryItem={handleDeleteHistoryItem}
                             item={item}
                             openModalWithItem={openModalWithItem}
+                            data-testid="history-item"
                         />
                     </div>
                 ))}
