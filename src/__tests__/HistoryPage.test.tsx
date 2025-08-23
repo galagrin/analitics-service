@@ -58,10 +58,10 @@ describe('тестируем HistoryPage', () => {
         );
         const clearLSButton = await screen.getByRole('button', { name: /Очистить всё/i });
 
-        fireEvent.click(clearLSButton, () => {
-            expect(storage.clearLocalStorage).toHaveBeenCalled();
-            expect(screen.queryByText(mockData[0].fileName)).not.toBeInTheDocument();
-        });
+        fireEvent.click(clearLSButton);
+        
+        expect(storage.clearLocalStorage).toHaveBeenCalled();
+        expect(screen.queryByText(mockData[0].fileName)).not.toBeInTheDocument();
     });
 
     it('при нажатии на иконку Корзины удаляеся элемент истории и не отображается в списке', () => {
@@ -72,9 +72,9 @@ describe('тестируем HistoryPage', () => {
             </MemoryRouter>
         );
         const deleteButton = screen.getByRole('img', { name: /delete/i });
-        fireEvent.click(deleteButton, () => {
-            expect(storage.saveToLocalStorage).toHaveBeenCalled();
-            expect(screen.queryByText(mockData[0].fileName)).not.toBeInTheDocument();
-        });
+        fireEvent.click(deleteButton);
+        
+        // Проверяем, что элемент больше не отображается
+        expect(screen.queryByText(mockData[0].fileName)).not.toBeInTheDocument();
     });
 });

@@ -1,4 +1,5 @@
 import { render, fireEvent, screen, waitFor } from '@testing-library/react';
+import { vi } from 'vitest';
 import { HistoryItemsList } from '../components/HistoryItemsList';
 
 describe('Modal', () => {
@@ -35,7 +36,7 @@ describe('Modal', () => {
         });
     });
 
-    it('открывает модальное окно при клике на пункт истории при наличии данных в data', async () => {
+    it('НЕ открывает модальное окно при клике на пункт истории без данных в data', async () => {
         const mockData = [
             {
                 id: '123',

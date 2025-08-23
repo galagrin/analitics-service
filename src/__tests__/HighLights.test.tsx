@@ -1,13 +1,15 @@
 import { vi } from 'vitest';
-import type { MockInstance } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import { useStore } from '../store/store';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { HighlightsList } from '../components/HighlightsList';
 
+// Мокаем store
 vi.mock('../store/store', () => ({
     useStore: vi.fn(),
 }));
+
+// Импортируем мок
+import { useStore } from '../store/store';
 
 describe('HighlightsList', () => {
     beforeEach(() => {
@@ -15,7 +17,7 @@ describe('HighlightsList', () => {
     });
 
     it('отображает пустое состояние, когда нет данных', () => {
-        (useStore as unknown as MockInstance).mockImplementation((selector) =>
+        vi.mocked(useStore).mockImplementation((selector: any) =>
             selector({
                 aggregatedResult: null,
                 setAggregatedResult: vi.fn(),
@@ -39,7 +41,7 @@ describe('HighlightsList', () => {
             total_spend_galactic: 10000.0,
         };
 
-        (useStore as unknown as MockInstance).mockImplementation((selector) =>
+        vi.mocked(useStore).mockImplementation((selector: any) =>
             selector({
                 aggregatedResult: mockData,
                 setAggregatedResult: vi.fn(),
