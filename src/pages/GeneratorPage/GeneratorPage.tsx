@@ -29,7 +29,7 @@ export const GeneratorPage = () => {
 
     return (
         <>
-            <div className={styles.generatorContainer}>
+            <div className={styles.generatorContainer} data-testid="generator-heading">
                 <div className={styles.heading}>Сгенерируйте готовый csv-файл нажатием одной кнопки</div>
                 <ReportGenarationField
                     loading={loading}

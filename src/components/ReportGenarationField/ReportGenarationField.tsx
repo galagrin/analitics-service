@@ -35,7 +35,7 @@ export const ReportGenarationField = ({
     const status = loading ? 'loading' : uploadSuccess ? 'success' : error ? 'error' : 'default';
     const getButtonContent = () => {
         if (loading && !uploadSuccess && !error) {
-            return <span className={styles.loader}></span>;
+            return <span className={styles.loader} data-testid="loader"></span>;
         } else if (uploadSuccess && !error && !loading) {
             return 'Done!';
         }

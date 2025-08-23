@@ -29,6 +29,9 @@ export const HistoryPage = () => {
 
     return (
         <>
+            <h1 data-testid="history-heading" style={{ display: 'none' }}>
+                История
+            </h1>
             <HistoryItemsList historyItems={historyItems} handleDeleteHistoryItem={handleDeleteHistoryItem} />
             <div className={styles.btnWrap}>
                 <Button

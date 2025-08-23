@@ -27,7 +27,7 @@ export const UploadAndSend = () => {
 
     const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
-        setIsDragging(true);
+        setIsDragging(false);
         const draggedFiles = event.dataTransfer.files;
         if (draggedFiles.length > 0) {
             setFile(draggedFiles[0]);
@@ -104,7 +104,7 @@ export const UploadAndSend = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.heading}>
+            <div className={styles.heading} data-testid="homepage-heading">
                 Загрузите <strong>csv</strong> файл и получите <strong>полную информацию</strong> о нём за сверхнизкое
                 время
             </div>
@@ -122,6 +122,7 @@ export const UploadAndSend = () => {
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}
+                data-testid="drop-area"
             >
                 {!file && !uploadSuccess && <UploadField handleFileChange={handleFileChange} loading={loading} />}
 

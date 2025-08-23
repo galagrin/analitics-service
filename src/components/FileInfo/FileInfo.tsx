@@ -43,7 +43,9 @@ export const FileInfo = ({ file, onRemove, status }: FileInfoProps) => {
                 isError={status === 'error' || status === 'extentionError' || status === 'invalidFields'}
                 isLoading={status !== 'loading'}
                 onRemove={onRemove}
-                buttonContent={status === 'loading' ? <span className={styles.loader}></span> : file.name}
+                buttonContent={
+                    status === 'loading' ? <span className={styles.loader} data-testid="loader"></span> : file.name
+                }
                 message={getMessage()}
             />
         </>

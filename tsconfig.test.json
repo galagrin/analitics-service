@@ -1,0 +1,16 @@
+{
+    "extends": "./tsconfig.app.json",
+    "compilerOptions": {
+        "composite": true,
+        "types": ["vitest/globals", "@testing-library/jest-dom", "vite/client"]
+    },
+    "include": [
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+        "src/test.d.ts",
+        "setupTests.ts",
+        "src/**/*.tsx", // добавляем все tsx файлы
+        "src/**/*.ts" // добавляем все ts файлы
+    ],
+    "exclude": ["node_modules"]
+}
